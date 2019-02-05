@@ -22,6 +22,16 @@
   color: #61dafb;
 }
 
+.person-frame {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  align-content: space-between;
+  padding: 2em;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
