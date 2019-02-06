@@ -8,13 +8,12 @@ class PokemonStats extends Component {
         super(props) 
 
         this.state = {
-            pokemonStatus: [],
+            pokemonStatus: []
         }
     }
 
     componentDidMount() {
-        // const BASE_URL_STATS = this.props.location.query.pokemon.url
-        const BASE_URL_STATS = 'https://pokeapi.co/api/v2/pokemon/alakazam/'
+        const BASE_URL_STATS = this.props.location.query.pokemon.url
         this.getStatusPokemon(BASE_URL_STATS)
     }
 

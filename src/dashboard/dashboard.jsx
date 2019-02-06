@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 import ContentHeader from '../template/contentHeader'
 
 class Dashboard extends Component {
-
     constructor(props) {
         super(props)
 
@@ -23,11 +22,13 @@ class Dashboard extends Component {
     }
 
     getList(URL) {
-        axios.get(URL).then(resp => this.setState({ pokemonList: resp.data }))
+        axios.get(URL)
+            .then(resp => this.setState({ pokemonList: resp.data }))
     }
 
     getStats(URL) {
-        axios.get(URL).then(resp => this.setState({ pokemonStats: resp.data }))
+        axios.get(URL)
+            .then(resp => this.setState({ pokemonStats: resp.data }))
     }
 
     renderRows() {
