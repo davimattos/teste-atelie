@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom' 
 
-import './App.css';
-import './Custom.css';
+import './dashboard/dashboard.css';
+import './pokemon/pokemon.css';
+import './template/mediaQueries.css';
 
 import Dashboard from './dashboard/dashboard'
 import PokemonStats from './pokemon/pokemonStats'

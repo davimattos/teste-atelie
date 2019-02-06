@@ -12,7 +12,7 @@ class Dashboard extends Component {
         this.state = {
             pokemonList: [],
             pokemonStats: [],
-            BASE_URL_LIST: 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=114'
+            BASE_URL_LIST: 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=80'
         }
 
         this.getList = this.getList.bind(this)
@@ -45,16 +45,24 @@ class Dashboard extends Component {
         return (
             <div>
                 <ContentHeader />
+                <div className="button-frame">
+                    {previous &&
+                        <button id="button-custom" type="submit" onClick={() => this.getList(previous)}>Previous</button>
+                    }
+                    {next &&
+                        <button id="button-custom" type="submit" onClick={() => this.getList(next)}>Next</button>
+                    }
+                </div>
                 <div className="person-frame">
                     {this.renderRows()}
                 </div>
                 <div className="button-frame">
-                {previous &&
-                    <button id="button-custom" type="submit" onClick={() => this.getList(previous)}>Previous</button>
-                }
-                {next &&
-                    <button id="button-custom" type="submit" onClick={() => this.getList(next)}>Next</button>
-                }
+                    {previous &&
+                        <button id="button-custom" type="submit" onClick={() => this.getList(previous)}>Previous</button>
+                    }
+                    {next &&
+                        <button id="button-custom" type="submit" onClick={() => this.getList(next)}>Next</button>
+                    }
                 </div>
             </div>
 

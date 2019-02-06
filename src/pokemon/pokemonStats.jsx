@@ -9,12 +9,12 @@ class PokemonStats extends Component {
 
         this.state = {
             pokemonStatus: [],
-
         }
     }
 
-    componentWillMount() {
-        const BASE_URL_STATS = this.props.location.query.pokemon.url
+    componentDidMount() {
+        // const BASE_URL_STATS = this.props.location.query.pokemon.url
+        const BASE_URL_STATS = 'https://pokeapi.co/api/v2/pokemon/alakazam/'
         this.getStatusPokemon(BASE_URL_STATS)
     }
 
@@ -26,24 +26,23 @@ class PokemonStats extends Component {
         const sprites = this.state.pokemonStatus.sprites || []
         return (
             <div className="pokemon-frame">
-                <h1>Pokemon Stats</h1>
                 {sprites.back_default &&
                     <div className="pokemon-images">
                         <p>Male Default/Shiny</p>
-                        <img src={sprites.back_default} />
-                        <img src={sprites.front_default} />
-                        <img src={sprites.back_shiny} />
-                        <img src={sprites.front_shiny} />
+                        <img src={sprites.back_default} alt=""/>
+                        <img src={sprites.front_default} alt=""/>
+                        <img src={sprites.back_shiny} alt=""/>
+                        <img src={sprites.front_shiny} alt=""/>
                     </div>
                 }
                 
                 {sprites.back_female &&
                     <div className="pokemon-images">
                         <p>Female Default/Shiny</p>
-                        <img src={sprites.back_female} />
-                        <img src={sprites.front_female} />
-                        <img src={sprites.back_shiny_female} />
-                        <img src={sprites.front_shiny_female} />
+                        <img src={sprites.back_female} alt=""/>
+                        <img src={sprites.front_female} alt=""/>
+                        <img src={sprites.back_shiny_female} alt=""/>
+                        <img src={sprites.front_shiny_female} alt=""/>
                     </div>
                 }
             </div>
@@ -96,10 +95,13 @@ class PokemonStats extends Component {
     render() {
         return (
             <div className="pokemon-general">
+                <h1>Pokemon Status</h1>
+                <div className="pokemon-info">
+                    {this.renderStats()}
+                    {this.renderTypes()}
+                    {this.renderAbilities()}
+                </div>
                 {this.renderImages()}
-                {this.renderStats()}
-                {this.renderTypes()}
-                {this.renderAbilities()}
                 <Link to="/" className="pokemon-button">
                     <button type="submit" id="button-custom">Voltar</button>
                 </Link>

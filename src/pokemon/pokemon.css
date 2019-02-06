@@ -1,0 +1,37 @@
+.pokemon-general h1{
+    font-family: 'Poiret One', cursive;
+    font-size: 2em;
+    padding-left: 10%;
+}
+
+.pokemon-images {
+    padding-left: 10%; 
+    background-color: rgb(248, 232, 212);
+    color: purple;
+}
+.pokemon-images p {
+    width: 100%;
+}
+.pokemon-general {
+    margin-top: 2em;
+    font-family: 'Poiret One', cursive;
+}
+
+.pokemon-images {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.pokemon-button {
+    display: flex;
+    justify-content: center;
+}
+
+.pokemon-button button{
+    margin-top: 2em;
+}
+
+.pokemon-info {
+    padding: 1% 0 2% 10%;
+}

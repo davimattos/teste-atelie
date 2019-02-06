@@ -12,6 +12,8 @@
 body {
 	font-family: Arial, helvetica, sans-serif;
 	line-height: 1.4;
+	background-image: linear-gradient(to right, #883f76, #8f3b7a, #632654);
+    color: #fff;
 }
 .content-header {
     margin: 1em;
